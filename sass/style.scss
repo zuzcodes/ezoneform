@@ -1,0 +1,125 @@
+/*IMPORT FONTS*/
+@font-face{
+    font-family: "shapiro regular";
+    src: url("./fonts/sharpiro-regular.woff2") format('woff');
+}
+
+@font-face{
+    font-family: "pro-con medium";
+    src: url("./fonts/uniform-pro-con-medium.woff2") format('woff');
+}
+/*VARIABLES*/
+
+$base-color: #16162C;
+$secondary-color: white;
+$base-font: "pro-con medium";
+$secondary-font: "shapiro regular";
+
+/*BASE*/
+body {
+    background-color: $base-color;
+
+    h1{
+        color: $secondary-color;
+        font-family: $base-font;
+        font-size: clamp(42px, 3vw, 3vw);
+    }
+
+    h2{
+        color: $secondary-color;
+        font-family: $secondary-font;
+        font-size: clamp(24px, 1.4vw, 1.4vw);
+        line-height: clamp(24px, 1vw, 1vw);
+    }
+
+    p{
+        color: $secondary-color;
+        font-family: $secondary-font;
+        font-size: clamp(22px, 1.1vw, 1.1vw);
+    }
+}
+
+/*******SIGN-UP FORM******/
+
+/*GENERAL*/
+#sign-up-form {
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+
+.form-screen{
+    align-self: center;
+    padding: 20px;
+    background-color: transparent;
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+    top: 50vh;
+
+}
+
+/*PROGRESS BAR*/
+#progress-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3vw;
+    align-content: center;
+    align-items: center;
+
+    h2{
+        border: 1px solid $secondary-color;
+        display: block;
+        padding: 0.5vw;
+        border-radius: 50%;
+        height: clamp(42px, 1vw, 1vw);
+        width: clamp(42px, 1vw, 1vw);
+        line-height: clamp(42px, 1vw, 1vw);
+        text-align: center;
+    }
+}
+
+.line{
+    width: 10vw;
+    height: 1px;
+    background-color: white;
+}
+
+/*FORM-GROUP*/
+.form-group{
+    display: grid;
+    box-sizing: border-box;
+    padding:10px 0;
+
+    label{
+        color: $secondary-color;
+        font-family: $base-font;
+        font-size: clamp(22px, 1em, 1em);
+    }
+
+    input[type=text],
+    select{
+        padding: 1.2vh;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 0.5vw 0 0.2vw 0;
+        font-family: $secondary-font; 
+        color: white;
+        width: 300px
+    }
+    input:focus{
+        outline: none;
+    }
+}
+
+.hint{
+    color: $secondary-color;
+    font-family: $secondary-font;
+    font-size: 14px;
+}
+
+}
+
+/*ADDITIONAL CLASSES*/
+.hidden{
+    visibility: hidden;
+}

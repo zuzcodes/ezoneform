@@ -10,8 +10,45 @@
     <nav>
       <a href="other.html">Other</a>
   </nav>
-    <h1>test</h1>
-    <h2>Jo's test</h2>
+<section id="sign-up-form">
+  <article class="form-screen" id="form-one">
+    <div id="progress-bar">
+       <h2>1</h2>
+       <div class="line"></div>
+       <h2>2</h2>
+       <div class="line"></div>
+       <h2>√</h2>
+    </div>
+    <form>
+      <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" required>
+      <span class="hint">What's your name?</span>
+      <span class="error" hidden>Please enter your name</span>
+      </div>
+      <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="text" name="email" required>
+      <span class="hint">What's your email adress?</span>
+      <span class="error" hidden>Please enter a valid email addess</span>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Region</label>
+      <select id="region" name="region" required>
+        <option value="">Please select your region</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Sweden">Sweden</option>
+        <option value="Norway">Norway</option>
+      </select>
+      <span class="error" hidden>Please select your region</span>
+    </div>
+    </form>
+
+  </article>
+  <article class="form-screen hidden" id="form-two"></article>
+  <article class="form-screen hidden" id="form-three"></article>
+</section>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
