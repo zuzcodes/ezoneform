@@ -45,7 +45,10 @@
             </select>
             <span class="error" hidden>Please select your region</span>
           </div>
+          <div class="buttons">
           <input type="button" id="next" value="Next" />
+          <button class="cancel"><a>Cancel</a></button>
+          </div>
         </form>
 
       </article>
@@ -92,16 +95,21 @@
       </li>
           </ul>
           <div class="form-group">
-        <label>What else would you like to hear about?</label>
+        <p>What else would you like to hear about?</p>
         <input type="text" id="other-cats">
         </div>
-        <input type="button" id="submit" value="Submit" />
+        <div class="buttons">
+        <input type="button" class="submit" value="Submit" />
+        <button class="cancel"><a>Cancel</a></button>
+      </div>
         </form>
 
 
 
       </article>
-      <article class="form-screen hidden" id="form-three"></article>
+      <article class="form-screen hidden" id="form-three">
+
+      </article>
     </section>
     <div id="app"></div>
     <script type="module" src="/main.js"></script>

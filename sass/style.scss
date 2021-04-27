@@ -133,9 +133,6 @@ body {
     flex-direction: column;
     align-items: center;
 
-    label {
-      color: $secondary-color;
-    }
 }
 
 /********SIGN-UP FORM PAGE 2*********/
@@ -143,9 +140,7 @@ body {
 #form-two{
   display: flex;
   flex-direction: column;
-  label{
-    color: $secondary-color;
-  }
+
   form{
     padding: 0 2vw ;
   }
@@ -161,9 +156,6 @@ body {
   }
 }
 
-label:not(.cat-item){
-  color: red;
-}
 
 ul{
   padding: 0;
@@ -172,6 +164,9 @@ ul{
 
 li{
   margin: 0.5vw 0;
+  label{
+    color: $secondary-color;
+  }
 }
 
 /*PROGRESS BAR*/
@@ -208,13 +203,14 @@ li{
 .form-group {
   display: grid;
   box-sizing: border-box;
-  padding: 10px 0;
-
+  padding: 0.5vw 0;
   label {
     font-family: $base-font;
-    font-size: clamp(22px, 1em, 1em);
+      color: $secondary-color;
+    font-size: clamp(18px, 1.2vw, 1.2vw);
   }
 
+  
   input,
   select{
     padding: 1.2vh;
@@ -224,9 +220,8 @@ li{
     margin: 0.5vw 0 0.2vw 0;
     font-family: $secondary-font;
     color: white;
-    width: 300px;
+    width: clamp(200px, 20vw, 20vw);
   }
-
 
   input:focus {
     outline: none;
@@ -236,6 +231,12 @@ li{
       border: 1px solid $fourth-color;
   }
 }
+
+.form-group:first-child{
+  padding-top: 0;
+}
+
+
 
 .hint {
   color: $secondary-color;
@@ -249,21 +250,38 @@ input[type="button"] {
   border: 1px solid $secondary-color;
   border-radius: 20px;
   color: $base-color;
-  margin: 2vw 0;
   padding: 15px 60px;
   transition: 0.25s;
-  font-size: clamp(18px, 1.2vw, 1.2vw);
 
 }
 
 #google {
     margin-bottom: 0;
+    width: clamp(200px, 20vw, 20vw);
 }
 
 input[type="button"]:hover {
   cursor: pointer;
   background-color: transparent;
   color: $secondary-color;
+}
+
+.buttons{
+display: flex;
+align-items: flex-end;
+justify-content: space-between;
+margin: 1vw 0;
+}
+
+.cancel{
+  color: $secondary-color;
+  background-color: transparent;
+  border: transparent;
+  text-decoration: underline;
+}
+
+.cancel:hover{
+  cursor: pointer;
 }
 /*FORM INFORMATION*/
 
