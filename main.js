@@ -1,4 +1,5 @@
 import "./sass/style.scss";
+import { headers } from "./settings.js";
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -10,4 +11,16 @@ function openFirstFormList() {
   document.querySelector("#sign-up-form").classList.remove("hidden");
   document.querySelector("#cta-join").classList.add("hidden");
   document.querySelector("#landing-page").classList.add("blurred");
+}
+
+
+function post(data) {
+  const postData = JSON.stringify(data);
+  fetch("https://zuzdata-0da8.restdb.io/rest/ezonesignup", {
+    method: "post",
+    headers: headers,
+    body: postData,
+  })
+    .then((res) => res.json())
+    .then(data => console.log(data));
 }
