@@ -164,6 +164,48 @@ li{
   }
 }
 
+
+/*CHECKBOX STYLING*/
+
+[type="checkbox"]{
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 4px;
+  appearance: none;
+}
+
+[type="checkbox"]:not(:checked){
+  border: 1px solid #54536d;
+}
+
+[type="checkbox"]:checked{
+  background-color:rgb(110,69,255);
+}
+
+[type="checkbox"]:focus{
+  outline: none;
+}
+[type="checkbox"]:checked::before{
+  position: absolute;
+  content: "✔";
+  color: $secondary-color;
+  left: 25%;
+  top: 25%;
+  background-color:rgb(110,69,255);
+
+}
+
+input[type="checkbox"]:checked:focus{
+  background: $base-color;
+  color: white;
+}
+
+input[type="checkbox"]:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 10px -3px rgba(169, 166, 194, 0.92);
+}
+
 /*PROGRESS BAR*/
 #progress-bar {
   display: flex;
@@ -205,7 +247,7 @@ li{
     font-size: clamp(18px, 1.2vw, 1.2vw);
   }
 
-  
+ 
   input,
   select{
     padding: 1.2vh;
@@ -218,7 +260,8 @@ li{
     width: clamp(200px, 20vw, 20vw);
   }
 
-  input:focus {
+  input:focus,
+  select:focus {
     outline: none;
   }
 
@@ -268,13 +311,16 @@ input[type="button"] {
 }
 
 .close:hover{
-  background-color: solid $base-color;
+  background-color: $base-color;
 }
 
 input[type="button"]:hover {
   cursor: pointer;
-  background-color: transparent;
   color: $secondary-color;
+}
+
+input[type="button"]:not(.close):hover {
+  background-color: transparent;
 }
 
 .back{
