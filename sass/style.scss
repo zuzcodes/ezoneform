@@ -32,11 +32,11 @@ $filter-fade: linear-gradient(0deg, $base-color, rgb(18, 8, 43, 0.85));
 
 /*BASE*/
 body {
+  display: flex;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   background-color: $base-color;
-  position: relative;
 
   h1 {
     color: $secondary-color;
@@ -116,8 +116,8 @@ body {
   border: 1px solid $secondary-color;
   border-radius: 10px;
   position: absolute;
-  top: calc(50% - 45vh);
-  left: calc(50% - 12vw);
+  top: 15%;
+  left: 35%;
   height: min-content;
   width: max-content;
   margin: auto;
@@ -167,7 +167,12 @@ li {
 
 #form-three{
   height: 52vh;
-  padding: 2vw;
+
+  h2,
+  p{
+    max-inline-size: 20rem;
+    padding: 0 2vw;
+  }
 }
 
 #done{
@@ -276,7 +281,7 @@ input[type="checkbox"]:hover {
     outline: none;
   }
 
-  input:not(#other-cats):valid {
+  input:not(#other):valid {
     border: 1px solid $fourth-color;
   }
 }
@@ -297,14 +302,17 @@ input[type="checkbox"]:hover {
   font-size: 10px;
 }
 
-/*BUTTON*/
-input[type="button"] {
+/*BUTTONS*/
+input[type="button"]:not(.close),
+input[type="submit"] {
   background: $secondary-color;
   border: 1px solid $secondary-color;
   margin: 1vw 0;
   border-radius: 5vw;
   color: $base-color;
   transition: 0.25s;
+  margin: 0.5vw 0;
+  padding: 15px 60px;
 }
 
 #previous:hover{
@@ -315,14 +323,9 @@ input[type="button"] {
   content:"hi ";
 }
 
-#google {
+#google{
   margin: 1vw 0 0 0;
   width: clamp(200px, 20vw, 20vw);
-  padding: 15px 60px;
-}
-
-.next,
-.submit {
   padding: 15px 60px;
 }
 
@@ -330,21 +333,23 @@ input[type="button"] {
   position: absolute;
   top: -2vw;
   right: -1vw;
+  border: 1px solid $secondary-color;
+  border-radius: 5vw;
   width: clamp(50px, 2vw, 2vw);
   height: clamp(50px, 2vw, 2vw);
 }
 
 .close:hover {
   background-color: $base-color;
-}
-
-input[type="button"]:hover {
   cursor: pointer;
   color: $secondary-color;
 }
 
-input[type="button"]:not(.close):hover {
+input[type="button"]:not(.close):hover,
+input[type="submit"]:hover{
+  cursor: pointer;
   background-color: transparent;
+  color: $secondary-color;
 }
 
 .back {
@@ -359,6 +364,7 @@ input[type="button"]:not(.close):hover {
 .back:hover {
   cursor: pointer;
 }
+
 /*FORM INFORMATION*/
 
 /*ADDITIONAL CLASSES*/

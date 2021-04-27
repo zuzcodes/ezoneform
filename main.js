@@ -2,7 +2,6 @@ import "./sass/style.scss";
 import { headers } from "./settings.js";
 
 const form = document.querySelector("form");
-
 window.addEventListener("DOMContentLoaded", init);
 
 function post(data) {
@@ -41,8 +40,6 @@ function autoFill(){
   form.elements.name.value = "John Doe";
   form.elements.email.value = "john@stud.kea.dk";
   form.elements.region.value = "Sweden"
-  
-
 }
 
 function validateForm() {
@@ -71,26 +68,29 @@ function backToPrevious() {
 }
 
 
-form.addEventListener("submit", (e) => {
+document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
 
-/*  if (form.checkValidity()) {
+  console.log(form.elements.name.value)
+
+  if (form.checkValidity()) {
     const interests = [];
     const interestsEls = document.querySelectorAll("[name=interests]:checked");
     interestsEls.forEach((el) => platforms.push(el.value));
 
     console.log(interests);
+    console.log(form.elements)
     post({
       name: form.elements.name.value,
       email: form.elements.email.value,
       region: form.elements.region.value,
       interest: interests,
-      other: form.elements.other.value,
+      //other: form.other.value,
     });
   
     document.querySelector("#form-two").classList.add("hidden");
     document.querySelector("#form-three").classList.remove("hidden");
-  }*/
+  }
 });
-//document.querySelector("form").setAttribute("novalidate", true);
+document.querySelector("form").setAttribute("novalidate", true);
 
