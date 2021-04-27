@@ -119,12 +119,13 @@ body {
   top: calc(50% - 45vh);
   left: calc(50% - 12vw);
   height: min-content;
-  width: min-content;
+  width: max-content;
   margin: auto;
 
   p {
     margin: 1vw 0;
   }
+
 }
 
 /*******SIGN-UP FORM PAGE 1******/
@@ -162,6 +163,19 @@ li {
   }
 }
 
+/*SIGN-UP FORM PAGE 3*/
+
+#form-three{
+  height: 52vh;
+  padding: 2vw;
+}
+
+#done{
+  background-color: $fourth-color ;
+  color: $base-color;
+  border: 1px solid $fourth-color;
+}
+
 /*CHECKBOX STYLING*/
 
 [type="checkbox"] {
@@ -186,9 +200,11 @@ li {
 [type="checkbox"]:checked::before {
   position: absolute;
   content: "✔";
+  padding: 0.2vw;
+  border-radius: 20px;
   color: $secondary-color;
-  left: 25%;
-  top: 25%;
+  left: 8%;
+  top: 8%;
   background-color: rgb(110, 69, 255);
 }
 
@@ -260,7 +276,7 @@ input[type="checkbox"]:hover {
     outline: none;
   }
 
-  input:valid {
+  input:not(#other-cats):valid {
     border: 1px solid $fourth-color;
   }
 }
@@ -289,6 +305,14 @@ input[type="button"] {
   border-radius: 5vw;
   color: $base-color;
   transition: 0.25s;
+}
+
+#previous:hover{
+  cursor: pointer;
+}
+
+#google::before{
+  content:"hi ";
 }
 
 #google {
@@ -345,4 +369,12 @@ input[type="button"]:not(.close):hover {
 .blurred {
   filter: blur(10px);
   -webkit-filter: blur(10px);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 600px){
+  .categories{
+    grid-template-columns: 1fr;
+  }
 }

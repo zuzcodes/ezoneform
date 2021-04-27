@@ -26,8 +26,23 @@ function showForm() {
   document.querySelector("#landing-page").classList.add("blurred");
   document.querySelector("#x-1").addEventListener("click", closeForm);
   document.querySelector("#x-2").addEventListener("click", closeForm);
+  document.querySelector("#x-3").addEventListener("click", closeForm);
   document.querySelector("#next").addEventListener("click", validateForm);
   document.querySelector("#back").addEventListener("click", backToPrevious);
+  document.querySelector("#previous").addEventListener("click", backToPrevious);
+}
+
+//auto-fill for google 
+
+document.getElementById("google").addEventListener("click", autoFill);
+
+function autoFill(){
+  console.log("button clicked")
+  form.elements.name.value = "John Doe";
+  form.elements.email.value = "john@stud.kea.dk";
+  form.elements.region.value = "Sweden"
+  
+
 }
 
 function validateForm() {
@@ -56,10 +71,10 @@ function backToPrevious() {
 }
 
 
-/*form.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (form.checkValidity()) {
+/*  if (form.checkValidity()) {
     const interests = [];
     const interestsEls = document.querySelectorAll("[name=interests]:checked");
     interestsEls.forEach((el) => platforms.push(el.value));
@@ -75,6 +90,7 @@ function backToPrevious() {
   
     document.querySelector("#form-two").classList.add("hidden");
     document.querySelector("#form-three").classList.remove("hidden");
-  }
+  }*/
 });
-document.querySelector("form").setAttribute("novalidate", true);*/
+//document.querySelector("form").setAttribute("novalidate", true);
+

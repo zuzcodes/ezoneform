@@ -18,9 +18,9 @@
           <div class="line"></div>
           <h2>2</h2>
           <div class="line"></div>
-          <h2>√</h2>
+          <h2>✔</h2>
         </div>
-        <input type="button" id="google" value="Sign-in with Google" />
+        <input type="button" id="google" value="Sign-up with Google" />
         <p>or</p>
         <form>
           <div class="form-group">
@@ -52,66 +52,79 @@
         <input id="x-2" type="button" class="close" value="✕" />
         <button id="back" class="back"><a>Back</a></button>
         <div id="progress-bar">
-          <h2>1</h2>
+          <h2 id="previous">1</h2>
           <div class="line"></div>
           <h2 class="fill">2</h2>
           <div class="line"></div>
-          <h2>√</h2>
+          <h2>✔</h2>
         </div>
         <form>
           <p>I'm mainly interested in:</p>
           <ul class="categories">
             <li class="cat-item">
-              <input type="checkbox" id="injuries" name="interests" />
+              <input type="checkbox" id="injuries" />
               <label>Injuries</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="nutrition" name="interests" />
+              <input type="checkbox" id="nutrition" />
               <label>Nutrition</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="hearing" name="interests" />
+              <input type="checkbox" id="hearing" />
               <label>Hearing</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="mindset" name="interests" />
+              <input type="checkbox" id="mindset" />
               <label>Mindset</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="technology" name="interests" />
+              <input type="checkbox" id="technology" />
               <label>Technology</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="training" name="interests" />
+              <input type="checkbox" id="training" />
               <label>Training</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="psychology" name="interests" />
+              <input type="checkbox" id="psychology" />
               <label>Psychology</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="sleep" name="interests" />
+              <input type="checkbox" id="sleep" />
               <label>Sleep</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="vision" name="interests" />
+              <input type="checkbox" id="vision" />
               <label>Vision</label>
             </li>
             <li class="cat-item">
-              <input type="checkbox" id="stress" name="interests" />
+              <input type="checkbox" id="stress" />
               <label>Stress</label>
             </li>
           </ul>
           <div class="form-group">
             <p>What else would you like to hear about?</p>
-            <input type="text" id="other-cats" name="other" />
+            <input type="text" id="other-cats" />
           </div>
-          <input type="button" class="submit" value="Submit" />
+          <input type="submit" class="submit" value="Submit" />
         </form>
       </article>
       <article class="form-screen hidden" id="form-three">
-        <h1>Thank You</h1>
-        <button>Exit and Browse</button>
+        <input id="x-3" type="button" class="close" value="✕" />
+        <div id="progress-bar">
+          <h2>1</h2>
+          <div class="line"></div>
+          <h2>2</h2>
+          <div class="line"></div>
+          <h2 id="done">✔</h2>
+        </div>
+        <h1>Thanks for signing up.</h1>
+        <p>
+          You will receive a welcome email from us soon,
+          as well as articles, infographics and videos
+          that cater to you specific interests.<br><br>
+          Enjoy and happy gaming!
+           </p>
       </article>
     </section>
     <script type="module" src="/main.js"></script>
