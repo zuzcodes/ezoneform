@@ -1,7 +1,8 @@
 import "./sass/style.scss";
 import { headers } from "./settings.js";
 
-const form = document.querySelector("form");
+const formFirstPart = document.querySelector("#form-1");
+const formSecondPart = document.querySelector("#form-2");
 window.addEventListener("DOMContentLoaded", init);
 
 function post(data) {
@@ -37,16 +38,16 @@ document.getElementById("google").addEventListener("click", autoFill);
 
 function autoFill(){
   console.log("button clicked")
-  form.elements.name.value = "John Doe";
-  form.elements.email.value = "john@stud.kea.dk";
-  form.elements.region.value = "Sweden"
+  formFirstPart.elements.name.value = "John Doe";
+  formFirstPart.elements.email.value = "john@stud.kea.dk";
+  formFirstPart.elements.region.value = "Sweden"
 }
 
 function validateForm() {
-  if (!form.elements.name.checkValidity()) {
+  if (!formFirstPart.elements.name.checkValidity()) {
     document.querySelector("#error-2").classList.add("hidden");
     document.querySelector("#error-1").classList.remove("hidden");
-  } else if (!form.elements.email.checkValidity()) {
+  } else if (!formFirstPart.elements.email.checkValidity()) {
     document.querySelector("#error-1").classList.add("hidden");
     document.querySelector("#error-2").classList.remove("hidden");
   } else {
@@ -71,26 +72,22 @@ function backToPrevious() {
 document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
 
-  console.log(form.elements.name.value)
-
-  if (form.checkValidity()) {
+  if (formFirstPart.checkValidity()) {
     const interests = [];
     const interestsEls = document.querySelectorAll("[name=interests]:checked");
-    interestsEls.forEach((el) => platforms.push(el.value));
-
-    console.log(interests);
-    console.log(form.elements)
+    interestsEls.forEach((el) => interests.push(el.value));
     post({
-      name: form.elements.name.value,
-      email: form.elements.email.value,
-      region: form.elements.region.value,
-      interest: interests,
-      //other: form.other.value,
+      name: formFirstPart.elements.name.value,
+      email: formFirstPart.elements.email.value,
+      region: formFirstPart.elements.region.value,
+      interests: interests,
+      other: formSecondPart.other.value,
     });
   
     document.querySelector("#form-two").classList.add("hidden");
     document.querySelector("#form-three").classList.remove("hidden");
   }
 });
-document.querySelector("form").setAttribute("novalidate", true);
+formFirstPart.setAttribute("novalidate", true);
+formSecondPart.setAttribute("novalidate", true);
 
