@@ -7,7 +7,6 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        nested: resolve(__dirname, "other.html"),
       },
     },
   },
