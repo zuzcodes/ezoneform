@@ -12,8 +12,7 @@
     </section>
     <section id="sign-up-form" class="hidden">
       <article class="form-screen" id="form-one">
-        <input type="button" class="close" value="✕">
-        <button class="back"><a>Back</a></button>
+        <input id="x-1" type="button" class="close" value="✕" />
         <div id="progress-bar">
           <h2 class="fill">1</h2>
           <div class="line"></div>
@@ -21,20 +20,20 @@
           <div class="line"></div>
           <h2>√</h2>
         </div>
-        <input type="button" id="google" value="Sign-in with Google">
+        <input type="button" id="google" value="Sign-in with Google" />
         <p>or</p>
         <form>
           <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" type="text" name="name" required />
             <span class="hint">What's your name?</span>
-            <span class="error" hidden>Please enter your name</span>
+            <input id="name" type="text" name="name" required />
+            <span id="error-1" class="error hidden">Name is required. Please, enter your name.</span>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" type="email" name="email" required />
             <span class="hint">What's your email adress?</span>
-            <span class="error" hidden>requires at leats an @sign</span>
+            <input id="email" type="email" name="email" required />
+            <span id="error-2" class="error hidden">Email is required. Please, enter a valid email address.</span>
           </div>
 
           <div class="form-group">
@@ -45,15 +44,13 @@
               <option value="Sweden">Sweden</option>
               <option value="Norway">Norway</option>
             </select>
-            <span class="error" hidden>Please select your region</span>
           </div>
-          <input type="button" class="next" value="Next" />
+          <input id="next" type="button" class="next" value="Next" />
         </form>
-
       </article>
       <article class="form-screen hidden" id="form-two">
-        <input type="button" class="close" value="✕">
-        <button class="back"><a>Back</a></button>
+        <input id="x-2" type="button" class="close" value="✕" />
+        <button id="back" class="back"><a>Back</a></button>
         <div id="progress-bar">
           <h2>1</h2>
           <div class="line"></div>
@@ -64,52 +61,58 @@
         <form>
           <p>I'm mainly interested in:</p>
           <ul class="categories">
-            <li class="cat-item"><input type="checkbox" id="injuries" >
-            <label>Injuries</label>
-          </li>
-            <li class="cat-item"><input type="checkbox" id="nutrition" >
+            <li class="cat-item">
+              <input type="checkbox" id="injuries" />
+              <label>Injuries</label>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="nutrition" />
               <label>Nutrition</label>
             </li>
-            <li class="cat-item"><input type="checkbox" id="hearing" >
-                <label>Hearing</label>
+            <li class="cat-item">
+              <input type="checkbox" id="hearing" />
+              <label>Hearing</label>
             </li>
-            <li class="cat-item"><input type="checkbox" id="mindset" >
+            <li class="cat-item">
+              <input type="checkbox" id="mindset" />
               <label>Mindset</label>
-          </li>
-            <li class="cat-item"><input type="checkbox" id="technology" >
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="technology" />
               <label>Technology</label>
-          </li>
-          <li class="cat-item"><input type="checkbox" id="training" >
-            <label>Training</label>
-        </li>
-        <li class="cat-item"><input type="checkbox" id="psychology" >
-          <label>Psychology</label>
-      </li>
-      <li class="cat-item"><input type="checkbox" id="sleep" >
-        <label>Sleep</label>
-      </li>
-      <li class="cat-item"><input type="checkbox" id="vision" >
-        <label>Vision</label>
-    </li>
-        <li class="cat-item"><input type="checkbox" id="stress" >
-          <label>Stress</label>
-      </li>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="training" />
+              <label>Training</label>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="psychology" />
+              <label>Psychology</label>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="sleep" />
+              <label>Sleep</label>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="vision" />
+              <label>Vision</label>
+            </li>
+            <li class="cat-item">
+              <input type="checkbox" id="stress" />
+              <label>Stress</label>
+            </li>
           </ul>
           <div class="form-group">
-        <p>What else would you like to hear about?</p>
-        <input type="text" id="other-cats">
-        </div>
-        <input type="button" class="submit" value="Submit" />
+            <p>What else would you like to hear about?</p>
+            <input type="text" id="other-cats" />
+          </div>
+          <input type="button" class="submit" value="Submit" />
         </form>
-
-
-
       </article>
       <article class="form-screen hidden" id="form-three">
-
+        <h1>Thank You</h1>
       </article>
     </section>
-    <div id="app"></div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
