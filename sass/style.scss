@@ -13,6 +13,7 @@
 $base-color: rgb(22, 22, 44);
 $secondary-color: rgb(255, 255, 255);
 $tertiary-color: rgb(109, 68, 250);
+$fourth-color: rgb(171, 244, 157);
 $base-font: "pro-con medium";
 $secondary-font: "shapiro regular";
 
@@ -180,7 +181,7 @@ body {
   }
 
   input:valid{
-      border: 1px solid green;
+      border: 1px solid $fourth-color;
   }
 }
 
