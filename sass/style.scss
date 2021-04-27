@@ -27,7 +27,7 @@ $base-font: "pro-con medium";
 $secondary-font: "shapiro regular";
 $tertiary-font: "pro-con black";
 $fourth-font: "shapiro bold";
-$filter-fade: linear-gradient(180deg,rgba(22,21,43,0),#16152b);
+$filter-fade: linear-gradient(0deg, $base-color,#12082b);
 
 /*BASE*/
 body {
@@ -132,19 +132,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
+
+form{
+  padding: 0 2vw ;
+}
+
 
 /********SIGN-UP FORM PAGE 2*********/
-
-#form-two{
-  display: flex;
-  flex-direction: column;
-
-  form{
-    padding: 0 2vw ;
-  }
-}
 
 .categories{
   display: grid;
@@ -216,7 +211,7 @@ li{
     padding: 1.2vh;
     background: transparent;
     border: 1px solid white;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 0.5vw 0 0.2vw 0;
     font-family: $secondary-font;
     color: white;
@@ -236,8 +231,6 @@ li{
   padding-top: 0;
 }
 
-
-
 .hint {
   color: $secondary-color;
   font-family: $secondary-font;
@@ -248,16 +241,34 @@ li{
 input[type="button"] {
   background: $secondary-color;
   border: 1px solid $secondary-color;
-  border-radius: 20px;
+  margin: 1vw 0;
+  border-radius: 5vw;
   color: $base-color;
-  padding: 15px 60px;
   transition: 0.25s;
-
 }
 
 #google {
-    margin-bottom: 0;
+    margin: 1vw 0 0 0;
     width: clamp(200px, 20vw, 20vw);
+    padding: 15px 60px;
+}
+
+.next,
+.submit{
+  padding: 15px 60px;
+}
+
+
+.close{
+  position: absolute;
+  top: -2vw;
+  right: -1vw;
+  width: clamp(50px, 2vw, 2vw);
+  height: clamp(50px, 2vw, 2vw);
+}
+
+.close:hover{
+  background-color: solid $base-color;
 }
 
 input[type="button"]:hover {
@@ -266,21 +277,16 @@ input[type="button"]:hover {
   color: $secondary-color;
 }
 
-.buttons{
-display: flex;
-align-items: flex-end;
-justify-content: space-between;
-margin: 1vw 0;
-}
-
-.cancel{
+.back{
   color: $secondary-color;
+  align-self: flex-start;
+  margin-left: 2vw;
   background-color: transparent;
   border: transparent;
   text-decoration: underline;
 }
 
-.cancel:hover{
+.back:hover{
   cursor: pointer;
 }
 /*FORM INFORMATION*/

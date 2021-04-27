@@ -27,7 +27,7 @@ function post(data) {
 
 //click next 
 
-document.getElementById("next").addEventListener("click", goToPageTwo);
+document.querySelector(".next").addEventListener("click", goToPageTwo);
 
 function goToPageTwo(){
   document.getElementById("form-one").classList.add("hidden");

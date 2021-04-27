@@ -12,6 +12,8 @@
     </section>
     <section id="sign-up-form" class="hidden">
       <article class="form-screen" id="form-one">
+        <input type="button" class="close" value="✕">
+        <button class="back"><a>Back</a></button>
         <div id="progress-bar">
           <h2 class="fill">1</h2>
           <div class="line"></div>
@@ -45,14 +47,13 @@
             </select>
             <span class="error" hidden>Please select your region</span>
           </div>
-          <div class="buttons">
-          <input type="button" id="next" value="Next" />
-          <button class="cancel"><a>Cancel</a></button>
-          </div>
+          <input type="button" class="next" value="Next" />
         </form>
 
       </article>
       <article class="form-screen hidden" id="form-two">
+        <input type="button" class="close" value="✕">
+        <button class="back"><a>Back</a></button>
         <div id="progress-bar">
           <h2>1</h2>
           <div class="line"></div>
@@ -98,10 +99,7 @@
         <p>What else would you like to hear about?</p>
         <input type="text" id="other-cats">
         </div>
-        <div class="buttons">
         <input type="button" class="submit" value="Submit" />
-        <button class="cancel"><a>Cancel</a></button>
-      </div>
         </form>
 
 
