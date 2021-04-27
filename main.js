@@ -5,6 +5,17 @@ const form = document.querySelector("form");
 
 window.addEventListener("DOMContentLoaded", init);
 
+function post(data) {
+  const postData = JSON.stringify(data);
+  fetch("https://zuzdata-0da8.restdb.io/rest/ezonesignup", {
+    method: "post",
+    headers: headers,
+    body: postData,
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+
 function init() {
   document.querySelector("#cta-join").addEventListener("click", showForm);
 }
@@ -44,13 +55,26 @@ function backToPrevious() {
   document.querySelector("#form-two").classList.add("hidden");
 }
 
-function post(data) {
-  const postData = JSON.stringify(data);
-  fetch("https://zuzdata-0da8.restdb.io/rest/ezonesignup", {
-    method: "post",
-    headers: headers,
-    body: postData,
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-}
+
+/*form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (form.checkValidity()) {
+    const interests = [];
+    const interestsEls = document.querySelectorAll("[name=interests]:checked");
+    interestsEls.forEach((el) => platforms.push(el.value));
+
+    console.log(interests);
+    post({
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      region: form.elements.region.value,
+      interest: interests,
+      other: form.elements.other.value,
+    });
+  
+    document.querySelector("#form-two").classList.add("hidden");
+    document.querySelector("#form-three").classList.remove("hidden");
+  }
+});
+document.querySelector("form").setAttribute("novalidate", true);*/
