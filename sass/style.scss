@@ -9,6 +9,15 @@
   src: url("./fonts/uniform-pro-con-medium.woff2") format("woff");
 }
 
+@font-face {
+  font-family: "pro-con black";
+  src: url("./fonts/uniform-pro-con-black.woff2") format("woff");
+}
+
+@font-face {
+  font-family: "shapiro bold";
+  src: url("./fonts/sharpiro-bold.woff2") format("woff");
+}
 /*VARIABLES*/
 $base-color: rgb(22, 22, 44);
 $secondary-color: rgb(255, 255, 255);
@@ -16,6 +25,9 @@ $tertiary-color: rgb(109, 68, 250);
 $fourth-color: rgb(171, 244, 157);
 $base-font: "pro-con medium";
 $secondary-font: "shapiro regular";
+$tertiary-font: "pro-con black";
+$fourth-font: "shapiro bold";
+$filter-fade: linear-gradient(180deg,rgba(22,21,43,0),#16152b);
 
 /*BASE*/
 body {
@@ -92,24 +104,28 @@ body {
   }
 }
 
-/*GENERAL*/
-#sign-up-form {
-  position: absolute;
-  top: calc(50% - 45vh);
-  left: calc(50% - 12vw);
-  height: min-content;
-  width: min-content;
-  margin: auto;
+/******GENERAL FORM******/
 
   .form-screen {
+    position: relative;
     align-self: center;
     padding: 2vw 0;
-    background-color: $base-color;
+    background: $filter-fade;
+    /*background-color: $base-color;*/
     border: 1px solid $secondary-color;
     border-radius: 10px;
-    top: 50vh;
+    position: absolute;
+    top: calc(50% - 45vh);
+    left: calc(50% - 12vw);
+    height: min-content;
+    width: min-content;
+    margin: auto;
+
+    p{
+      margin: 1vw 0;
   }
-}
+  }
+
 
 /*******SIGN-UP FORM PAGE 1******/
 #form-one{
@@ -117,10 +133,47 @@ body {
     flex-direction: column;
     align-items: center;
 
-    p{
-        margin: 1vw;
+    label {
+      color: $secondary-color;
     }
 }
+
+/********SIGN-UP FORM PAGE 2*********/
+
+#form-two{
+  display: flex;
+  flex-direction: column;
+  label{
+    color: $secondary-color;
+  }
+  form{
+    padding: 0 2vw ;
+  }
+}
+
+.categories{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  label{
+    font-family: $fourth-font;
+    font-size: clamp(22px, 1.1vw, 1.1vw);
+  }
+}
+
+label:not(.cat-item){
+  color: red;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+li{
+  margin: 0.5vw 0;
+}
+
 /*PROGRESS BAR*/
 #progress-bar {
   display: flex;
@@ -158,7 +211,6 @@ body {
   padding: 10px 0;
 
   label {
-    color: $secondary-color;
     font-family: $base-font;
     font-size: clamp(22px, 1em, 1em);
   }
