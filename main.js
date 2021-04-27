@@ -24,3 +24,13 @@ function post(data) {
     .then((res) => res.json())
     .then(data => console.log(data));
 }
+
+//click next 
+
+document.getElementById("next").addEventListener("click", goToPageTwo);
+
+function goToPageTwo(){
+  document.getElementById("form-one").classList.add("hidden");
+  document.getElementById("form-two").classList.remove("hidden");
+
+}
