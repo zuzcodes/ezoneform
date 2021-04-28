@@ -20,7 +20,7 @@
           <div class="line"></div>
           <h2>✔</h2>
         </div>
-        <input type="button" id="google" value="Sign-up with Google" />
+        <input type="button" id="google" value="Sign-up with Google" class="hidden"/>
         <p>or</p>
         <form id="form-1">
           <div class="form-group">
@@ -38,14 +38,14 @@
 
           <div class="form-group">
             <label for="country">Region</label>
-            <select id="region" name="region" required>
+            <select id="region" name="region">
               <option value="">Please select your region</option>
               <option value="Denmark">Denmark</option>
               <option value="Sweden">Sweden</option>
               <option value="Norway">Norway</option>
             </select>
           </div>
-          <input id="next" type="button" class="next" value="Next" />
+          <input id="next" type="button" class="next hidden" value="Next"/>
         </form>
       </article>
       <article class="form-screen hidden" id="form-two">
@@ -106,7 +106,7 @@
             <p>What other topics are you interested in?</p>
             <input type="text" id="other" name="other" autocomplete="off" />
           </div>
-          <input type="submit" id="submit" value="Submit" />
+          <input type="submit" id="submit" value="Submit" class="hidden"/>
         </form>
       </article>
       <article class="form-screen hidden" id="form-three">

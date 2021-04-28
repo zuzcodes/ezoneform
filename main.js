@@ -24,6 +24,8 @@ function showForm() {
   document.querySelector("#sign-up-form").classList.remove("hidden");
   document.querySelector("#cta-join").classList.add("hidden");
   document.querySelector("#landing-page").classList.add("blurred");
+  document.querySelector("#google").classList.remove("hidden");
+  document.querySelector("#next").classList.remove("hidden");
   document.querySelector("#x-1").addEventListener("click", closeForm);
   document.querySelector("#x-2").addEventListener("click", closeForm);
   document.querySelector("#x-3").addEventListener("click", closeForm);
@@ -53,6 +55,7 @@ function validateForm() {
   } else {
     document.querySelector("#form-one").classList.add("hidden");
     document.querySelector("#form-two").classList.remove("hidden");
+    document.querySelector("#submit").classList.remove("hidden");
   }
 }
 
