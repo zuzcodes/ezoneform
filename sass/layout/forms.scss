@@ -37,9 +37,15 @@
       margin: 0.5vw 0 0.2vw 0;
       font-family: $secondary-font;
       color: white;
-      width: clamp(300px, 20vw, 20vw);
     }
   
+  input[type="text"]{
+    width: clamp(300px, 20vw, 20vw);
+  }
+
+  select{
+    width: clamp(300px, 22vw, 22vw);
+  }
     input:focus,
     select:focus {
       outline: none;
@@ -67,7 +73,9 @@
   }
 
   /*******SIGN-UP FORM PAGE 1******/
-  #form-one {
+  #form-one,
+  #form-two,
+  #form-three {
     display: flex;
     flex-direction: column;
     align-items: center;
