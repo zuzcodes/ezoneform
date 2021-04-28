@@ -1,0 +1,51 @@
+/*LANDING PAGE*/
+#landing-page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../landing.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    button {
+      position: absolute;
+      top: 77vh;
+      left: calc(50% - 75px);
+      width: 150px;
+      height: 50px;
+      background: transparent;
+      color: $third-color;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: 2px solid $third-color;
+      border-radius: 40px;
+      overflow: hidden;
+      cursor: pointer;
+      outline: none;
+      z-index: 1;
+      &::after {
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: "";
+        background-color: $third-color;
+        position: absolute;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+      &:hover {
+        color: $secondary-color;
+  
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .blurred {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+  }
+  

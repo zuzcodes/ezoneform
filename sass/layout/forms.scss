@@ -1,0 +1,113 @@
+/******GENERAL FORM******/
+
+.form-screen {
+    align-self: center;
+    padding: 2vw 0;
+    background: $filter-fade;
+    border: 1px solid $secondary-color;
+    border-radius: 10px;
+    position: absolute;
+    top: 10vh;
+    left: calc(50% - 13vw);
+    height: min-content;
+    width: clamp(400px, 26vw, 26vw);
+  
+    p {
+      margin: 1vw 0;
+    }
+  }
+  
+  /*FORM-GROUP*/
+.form-group {
+    display: grid;
+    box-sizing: border-box;
+    padding: 0.5vw 0;
+    label {
+      font-family: $base-font;
+      color: $secondary-color;
+      font-size: clamp(18px, 1.2vw, 1.2vw);
+    }
+  
+    input,
+    select {
+      padding: 1.2vh;
+      background: transparent;
+      border: 1px solid white;
+      border-radius: 20px;
+      margin: 0.5vw 0 0.2vw 0;
+      font-family: $secondary-font;
+      color: white;
+      width: clamp(300px, 20vw, 20vw);
+    }
+  
+    input:focus,
+    select:focus {
+      outline: none;
+    }
+  
+    input:not(#other):valid {
+      border: 1px solid $fourth-color;
+    }
+  }
+  
+  .form-group:first-child {
+    padding-top: 0;
+  }
+  
+  .hint {
+    color: $secondary-color;
+    font-family: $secondary-font;
+    font-size: 12px;
+  }
+  
+  .error {
+    color: $fifth-color;
+    font-family: $secondary-font;
+    font-size: 10px;
+  }
+
+  /*******SIGN-UP FORM PAGE 1******/
+  #form-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    padding: 0 2vw;
+  }
+  
+  /********SIGN-UP FORM PAGE 2*********/
+  
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+    label {
+      font-family: $fourth-font;
+      font-size: clamp(22px, 1.1vw, 1.1vw);
+    }
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    margin: 0.5vw 0;
+    label {
+      color: $secondary-color;
+    }
+  }
+  
+  /*SIGN-UP FORM PAGE 3*/
+  
+  #form-three{
+    #thanks,
+    p{
+      max-inline-size: 20rem;
+      padding: 0 2vw;
+    }
+  }
+  

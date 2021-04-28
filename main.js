@@ -29,6 +29,7 @@ function showForm() {
   document.querySelector("#x-1").addEventListener("click", closeForm);
   document.querySelector("#x-2").addEventListener("click", closeForm);
   document.querySelector("#x-3").addEventListener("click", closeForm);
+  document.getElementById("browse").addEventListener("click", closeForm);
   document.querySelector("#next").addEventListener("click", validateForm);
   document.querySelector("#back").addEventListener("click", backToPrevious);
   document.querySelector("#previous").addEventListener("click", backToPrevious);

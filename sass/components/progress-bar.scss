@@ -1,0 +1,36 @@
+/*PROGRESS BAR*/
+.progress-bar {
+    display: flex;
+    margin: 0 2vw;
+    align-content: center;
+    align-items: center;
+  
+    h2 {
+      border: 1px solid $secondary-color;
+      display: block;
+      padding: 0.5vw;
+      border-radius: 50%;
+      height: clamp(50px, 1vw, 1vw);
+      width: clamp(50px, 1vw, 1vw);
+      line-height: clamp(50px, 1vw, 1vw);
+      text-align: center;
+    }
+  
+    .fill {
+      color: $base-color;
+      background-color: $secondary-color;
+    }
+  }
+  
+  .line {
+    width: clamp(80px, 5vw, 5vw);
+    height: 1px;
+    background-color: white;
+  }
+
+  .done{
+    background-color: $fourth-color ;
+    color: $base-color;
+    border: 1px solid $fourth-color;
+  }
+  
